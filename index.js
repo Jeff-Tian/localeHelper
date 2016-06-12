@@ -10,4 +10,5 @@ i18n.configure({
 
 module.exports = function (app) {
     app.use(i18n.init);
+    app.all('*', localeHelper.setLocale, localeHelper.setLocalVars);
 };
